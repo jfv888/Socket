@@ -10,8 +10,7 @@ def thread_function(conn, addr):
         print(f"Connected by {addr}")
         while True:
             data = conn.recv(1024)
-            print(addr + data)
-            conn.send()
+            print(f"Adresse: {addr} sent message {data}")
 
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
